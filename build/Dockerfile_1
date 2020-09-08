@@ -1,0 +1,8 @@
+FROM quay.io/derailed/popeye:latest
+ENV USER_ID=1000 \
+    USER_NAME=popeye
+#RUN useradd -r -u 1000 -g popeye popeye
+#RUN mkdir -p /home/popeye && chmod -R 640 /home/popeye
+#WORKDIR /home/popeye
+USER ${USER_ID}:${USER_ID}
+#RUN chown -R ${USER_ID}:${USER_ID} /home/popeye/
